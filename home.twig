@@ -18,9 +18,9 @@
       <div class="headerwrapper">
         <div class="logo-container">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            {{widget('companyname', 'companyname', {"business": "AK STUDIO"})|raw}}
         </div>
-            {{widget('content', 'textwidgetbox1', {content: '<h4 style="text-align:right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</h4>', lines: 'all'})|raw}}
+            {{widget('content', 'textwidgetbox1', {content: '<h4 style="text-align:right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</h4>', lines: 'all'})|raw}}
        </div>
   </header> 
 
@@ -30,6 +30,8 @@
     </div>
 </div>
 
+<div class="page-wrap">
+
 <div class="headerwrapper">
 
 <section class="bk-section">
@@ -38,14 +40,14 @@
     'showTitle': true,
     'images':
     [
-    {'imageHeight':'320', 'imageWidth':'480', 'url':asset('/images/gallery/1.jpg'), 'title':'Image 1',  'description': 'This is image 1'},
-    {'imageHeight':'320', 'imageWidth':'480', 'url':asset('/images/gallery/2.jpg'), 'title':'Image 2',  'description': 'This is image 2'},
-    {'imageHeight':'320', 'imageWidth':'480', 'url':asset('/images/gallery/3.jpg'), 'title':'Image 3',  'description': 'This is image 3'},
-    {'imageHeight':'320', 'imageWidth':'480', 'url':asset('/images/gallery/4.jpg'), 'title':'Image 4',  'description': 'This is image 4'},
-    {'imageHeight':'320', 'imageWidth':'480', 'url':asset('/images/gallery/5.jpg'), 'title':'Image 5',  'description': 'This is image 5'},
-    {'imageHeight':'320', 'imageWidth':'480', 'url':asset('/images/gallery/6.jpg'), 'title':'Image 6',  'description': 'This is image 6'},
-    {'imageHeight':'320', 'imageWidth':'480', 'url':asset('/images/gallery/7.jpg'), 'title':'Image 7',  'description': 'This is image 7'},
-    {'imageHeight':'320', 'imageWidth':'480', 'url':asset('/images/gallery/8.jpg'), 'title':'Image 8',  'description': 'This is image 8'}
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/1.jpg'), 'title':'Image 1',  'description': 'This is image 1'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/2.jpg'), 'title':'Image 2',  'description': 'This is image 2'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/3.jpg'), 'title':'Image 3',  'description': 'This is image 3'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/4.jpg'), 'title':'Image 4',  'description': 'This is image 4'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/5.jpg'), 'title':'Image 5',  'description': 'This is image 5'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/6.jpg'), 'title':'Image 6',  'description': 'This is image 6'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/7.jpg'), 'title':'Image 7',  'description': 'This is image 7'},
+    {'imageHeight':'246', 'imageWidth':'246', 'url':asset('/images/gallery/8.jpg'), 'title':'Image 8',  'description': 'This is image 8'}
     ]
     })|raw}}
 </div>
@@ -55,11 +57,23 @@
 </div>
 
 </div>
+</div>
 
 <footer class="bk-footer">
 	   <div class="footer-border headerwrapper">
 		    {{widget('profile', 'socialicons', { 'profileType' : 'socialicons' })|raw}}
 	   </div>
 </footer>
+
+  <div class="widgetfooter clearfix">
+      <div class="headerwrapper">
+          <div class="left">
+              {{widget('companyname', 'thisunqiuewidgetname', {"business": "profile"})|raw}}
+          </div>
+          <div class="right">
+              {{widget('profile', 'headercolumn1profileCopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}} 
+          </div>
+      </div>
+  </div>
 
 {% endblock %}

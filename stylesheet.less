@@ -13,13 +13,15 @@
 ::selection { background-color: fade(@color-swatch3, 85%); }
 
 body {
-	background-color: darken(@color-swatch1,3%);
-	background-size: 100% auto;
-	background-attachment: fixed;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-	background-repeat:no-repeat;
-	background-size:cover;
+	    width: 100%; 
+    height: 100%;
+    background-image: image('/images/photography.png'); 
+    background-position: 0px 0px;
+    animation: animatedBackground 800s linear infinite;
+    -moz-animation: animatedBackground 800s linear infinite;
+    -webkit-animation: animatedBackground 800s linear infinite;
+    -ms-animation: animatedBackground 800s linear infinite;
+    -o-animation: animatedBackground 800s linear infinite;
 }
 
 .wrapper {
@@ -28,14 +30,42 @@ body {
 	padding: 0 10%;
 }
 
+.page-wrap {
+	background-color:@color-swatch1;
+}
+
+/*	===============================
+	Background CSS Animation 
+	=============================== */
+
+@keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -15000px; }
+}
+@-moz-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -15000px; }
+}
+@-webkit-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -15000px; }
+}
+@-ms-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -15000px; }
+}
+@-o-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -15000px; }
+}
+
 
 /*	===============================
 	Header
 	=============================== */
 
-header.bk-header {
-	background-color:lighten(@color-swatch3,90%);
-	padding: 100px 0px 100px;
+header.bk-header, footer.bk-footer {
+    padding:120px 0px;
 }
 
 .widget {
@@ -52,10 +82,6 @@ header.bk-header {
 	@media @tablet {
 		margin-right: 35px;
 	}
-}
-
-.widget.companyname a {
-	font-weight: 700;
 }
 
 .logo-container {
@@ -77,8 +103,17 @@ header.bk-header {
 	margin: 0 10%;
 }
 
-.widgetheader {
+.widgetheader, .widgetfooter {
 	background-color:@color-swatch3;
+	border-bottom:3px solid lighten(@color-swatch3,80%);
+}
+
+.widgetfooter {
+	padding:50px 0px;
+}
+
+.widgetfooter .widget.companyname a {
+	color:@font-swatch7-color;
 }
 
 .left .widget.profile {
@@ -87,6 +122,11 @@ header.bk-header {
 
 .right .widget.profile {
 	float:right;
+	padding-top:20px;
+}
+
+.bk-section {
+	padding-top:40px;
 }
 
 /*	===============================
@@ -94,7 +134,9 @@ header.bk-header {
 	=============================== */
 
 .navbar {
-	background-color:lighten(@color-swatch3,85%);
+	background-color:@color-swatch1;
+	border-bottom:3px solid lighten(@color-swatch3,80%);
+	padding:10px 0px;
 }
 
 .widget.extendednavigation {
@@ -135,6 +177,38 @@ header.bk-header {
 
 .widget .extendednavigation ul li.folder:after {
 	top:48%;
+}
+
+.widget .extendednavigation > ul > li > a:hover {
+	color:@font-swatch6-color;
+	border-bottom:3px solid @color-swatch7;
+	margin-bottom: -25px;
+	padding-bottom: 15px;
+}
+
+.widget .extendednavigation ul li.folder .text:hover {
+	color:@font-swatch6-color;
+}
+
+.widget .extendednavigation ul li:hover ul {
+	background-color:@color-swatch7;
+}
+
+.widget .extendednavigation ul li.folder .text {
+	color:@font-swatch7-color;
+}
+
+.widget .extendednavigation ul > li.folder > .text {
+	color:@font-swatch6-color;
+}
+
+/* ===============================
+   FEATURE = gallery widget
+   =============================== */
+
+.widget.gallery ul li {
+	width: 24%;
+	padding-bottom:24%;
 }
 
 /*	===============================
@@ -315,6 +389,10 @@ time {
 
 textarea.message {
 	height:150px;
+}
+
+.widget.profile .bk-profile-socialicons span a:hover {
+	background-color:@color-swatch7;
 }
 
 /*	===============================
@@ -506,11 +584,6 @@ select::-ms-expand {
 /*	===============================
 	Footer
 	=============================== */
-
-.bk-footer {
-	background-color: @color-swatch3;
-	padding: 30px 0px;
-}
 
 .widget.profile {
 	margin: 0px auto;
