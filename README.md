@@ -1,4 +1,4 @@
-ak-studio
-=========
+Techdesk
+=======
 
-Standard Basekit Template
+BaseKit Blog Template

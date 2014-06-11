@@ -1,0 +1,638 @@
+
+/*	===============================
+	Style import
+	=============================== */
+@import "@{templateCommon}/basekit-bootstrap.less";
+
+
+/*	===============================
+	Globals
+	=============================== */
+
+::-moz-selection { background-color: fade(@color-swatch3, 85%); }
+::selection { background-color: fade(@color-swatch3, 85%); }
+
+body {
+	background-color: darken(@color-swatch1,3%);
+	background-size: 100% auto;
+	background-attachment: fixed;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+	padding: 0 10%;
+}
+
+
+/*	===============================
+	Header
+	=============================== */
+
+header.bk-header {
+	background-color:lighten(@color-swatch3,90%);
+	padding: 100px 0px 100px;
+}
+
+.widget {
+	&.logo, &.companyname {
+		display: inline-block;
+	}
+	&.logo img {
+		vertical-align: bottom;
+	}
+}
+
+.widget.companyname {
+	margin-left: 5px;
+	@media @tablet {
+		margin-right: 35px;
+	}
+}
+
+.widget.companyname a {
+	font-weight: 700;
+}
+
+.logo-container {
+	display: inline-block;
+	width: 35%;
+	float:left;
+	@media only screen and (max-width: 900px) {
+		width: 100%;
+	}
+}
+
+#textwidgetbox1 {
+	float:right;
+	width:60%;
+}
+
+.headerwrapper {
+	width: 80%;
+	margin: 0 10%;
+}
+
+.widgetheader {
+	background-color:@color-swatch3;
+}
+
+.left .widget.profile {
+	float:left;
+}
+
+.right .widget.profile {
+	float:right;
+}
+
+/*	===============================
+	Extended Navigation
+	=============================== */
+
+.navbar {
+	background-color:lighten(@color-swatch3,85%);
+}
+
+.widget.extendednavigation {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	vertical-align: bottom;
+	@media only screen and (max-width: 900px) {
+		display: block;
+		margin-top: 15px;
+		width: 100%;
+	}
+	@media @tablet {
+		margin-top: 0;
+	}
+	ul {
+		@media only screen and (max-width: 900px) {
+			float: none;
+		}
+	}
+}
+
+.widget .extendednavigation ul li:hover ul {
+	background-color:lighten(@color-swatch3,15%);
+}
+
+.widget .extendednavigation ul li.folder:after {
+	border-top-color:lighten(@color-swatch3,15%);
+}
+
+.widget .extendednavigation ul li a {
+	padding: 5px 20px;
+}
+
+.widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
+	padding:5px 20px;
+}
+
+.widget .extendednavigation ul li.folder:after {
+	top:48%;
+}
+
+/*	===============================
+	Blog
+	=============================== */
+
+.blog-post-feature-image-wrap {
+	background-repeat: no-repeat;
+	margin-left: -16.7%;
+	padding-left: 16.7%;
+	margin-right: -16.7%;
+	padding-right: 16.7%;
+	width: inherit;
+	img {
+		width:100%;
+	}
+}
+
+.blogpost, .blog-post-list {
+   .blog-post-feature-image-wrap {
+       line-height: 0;
+       background-size: cover;
+       background-position: center;
+       width: auto;
+       img {
+           display: none;
+       }
+   }
+}
+
+.blog-post-list .blog-post-feature-image-wrap {
+   height: 250px;
+}
+
+.blogpost .blog-post-feature-image-wrap {
+   height: 350px;
+}
+
+.blog-post-title {
+	padding-top:60px;
+}
+
+.blog-post-item.has-image {
+	padding-bottom:60px;
+}
+
+.blog-search-input {
+	width: 40%;
+	height: 36px;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+.blog-search-form {
+	padding:20px 0px;
+}
+
+/*	===============================
+	Menu
+	=============================== */
+
+.dietary-icon {
+	border:1px solid @color-swatch5!important;
+	padding:5px;
+}
+
+.menu-item-promoted {
+	background-color: darken(@color-swatch1,6%);
+	padding:20px!important;
+}
+
+.menu-subsection-wrapper.menu-subsection-promoted {
+	background-color: darken(@color-swatch1,3%);
+	padding:40px;
+}
+
+.main.wrapper {
+	width:100%;
+}
+
+.menu .menu-subsection {
+	padding: 10px 0px 0px 0px;
+	margin: 0;
+}
+
+.menu-subsection h2 {
+	font-size:@font-swatch1-font-size;
+	font-weight:@font-swatch1-font-weight;
+}
+
+.dietary-icon {
+	padding: 5px 5px 3px 5px;
+}
+
+.menu-item-image-wrap {
+    height: 200px;
+    margin: 1em 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    img {
+        display: none;
+        border: none;
+    }
+}
+
+/*	===============================
+	Bootstrap Modifications
+	=============================== */
+
+input, textarea {
+	border:0;
+	background-color: darken(@color-swatch1,3%);
+}
+
+.widget.profile form fieldset input {
+	background-color: darken(@color-swatch1,3%);
+}
+
+.widget.profile form button {
+	padding: 7px 14px 11px;
+}
+
+.signupform fieldset button {
+	padding: 10px 14px 14px 14px;
+}
+
+.blog-search-submit-button {
+	padding:4px 14px 8px 14px;
+	background-color:@color-swatch3;
+	border:0;
+	margin-bottom:10px;
+	font-family:@font-swatch7-font-family; 
+	font-weight: @font-swatch7-font-weight; 
+	color:@font-swatch7-color; 
+	line-height:@font-swatch7-line-height; 
+	letter-spacing: @font-swatch7-letter-spacing; 
+	font-size: @font-swatch7-font-size;
+		&:hover {
+		background-color: lighten(@color-swatch7,15%);
+		border: none;
+	}
+}
+
+.widget.button button {
+	&:hover{
+		background-color:lighten(@color-swatch3,5%);
+	}
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play {
+	height:50px;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev, .widget.responsiveslideshow .slideshow-widget .btn-next {
+	padding:5px;
+	background-color:#ddd;
+}
+
+.signupform fieldset input {
+	width:50%;
+}
+
+.widget.tweet {
+	margin:17px 0px;
+}
+
+time {
+	font-size:1em;
+}
+
+.widget.responsiveslideshow .title, .widget.responsiveslideshow .description {
+	color:@font-swatch5-color;
+}
+
+textarea.message {
+	height:150px;
+}
+
+/*	===============================
+	Ecom
+	=============================== */
+.widget.ecomcheckout .delivery select {
+	-webkit-appearance: none;
+    -moz-appearance: window;
+    appearance: none;
+    outline: none !important;
+    -moz-outline-style: none;
+    border: 1px solid @color-swatch5, 25%;
+    position: relative;
+    background: transparent;
+    padding: 10px 23px 10px 10px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-image: image('/images/arrow.png');
+    background-position: right 6% center;
+    background-repeat: no-repeat;
+    border: 0;
+    background-color: darken(@color-swatch1,3%);
+    background-position-x: 99%;
+    background-position-y: 53%;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: window;
+    appearance: none;
+    outline: none !important;
+    -moz-outline-style: none;
+    border: 1px solid @color-swatch5, 25%;
+    position: relative;
+    background: transparent;
+    padding: 10px 23px 10px 10px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-image: image('/images/arrow.png');
+    background-position: right 6% center;
+    background-repeat: no-repeat;
+    border: 0;
+    background-color: darken(@color-swatch1,3%);
+    background-position-x: 95%;
+    background-position-y: 53%;
+}
+
+select::-ms-expand {
+   display: none;
+}
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+   select {
+   -moz-appearance: none;
+   text-indent: 0.01px
+   ;
+   text-overflow: '';
+}
+
+.ecom-featuredproducts-wrap h2, .ecom-productslist-product h2, .ecom-product h2 {
+	font-size:@font-swatch3-font-size;
+}
+
+/* ===============================
+   SLIDESHOW WIDGET
+   =============================== */
+.widget.responsiveslideshow {
+    .slideshow-image-list,
+    .slideshow-widget {
+        min-height: 450px;
+        @media @tablet {
+            min-height: 350px;
+        }
+        @media @mobile {
+            min-height: 280px;
+            height: 280px;
+        }
+    }
+    .title,
+    .description {
+        display: block;
+        font-size: 15px;
+        padding: 5px 0 5px 10px;
+    }
+    .description {
+      padding-top: 0;
+    }
+    .content-wrapper {
+        background: rgba(0,0,0,0.5);
+    }
+    .slideshow-widget {
+        /* Arrows */
+        .btn-prev,
+        .btn-next {
+            font-size: 0;
+            z-index: 11;
+            text-indent: -99999px;
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,0.5);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            @media @mobile {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .btn-prev {
+            &:after {
+                content: "\2190";
+                color: #fff;
+                top: 10px;
+                @media @mobile {
+                    top: 4px;
+                }
+            }
+        }
+        .btn-next {
+            &:after {
+                content: "\2192";
+                color: #fff;
+                top: 10px;
+                @media @mobile {
+                    top: 4px;
+                }
+            }
+        }
+        /* Play Button */
+        .btn-play {
+            background: rgba(0,0,0,0.5);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            &:after {
+                color: #fff;
+                letter-spacing: -4px;
+                top: 0;
+            }
+        }
+    }
+    /* Slideshow Controls */
+    .slideshow-widget-controls {
+        .dot {
+            width: 11px;
+            height: 11px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            &.selected {
+                background-color: @color-swatch5;
+            }
+        }
+    }
+}
+
+.widget.responsiveslideshow .btn-play:after {
+    font-size:20px;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play {
+    background: rgba(0,0,0,0.5);
+    font-size: 0;
+    text-indent: -99999px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 12;
+    width: 42px;
+    height: 42px;
+    top: -5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    @media @mobile {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play:after {
+    top:-7px;
+    @media @mobile {
+        top: -12px;
+    }
+}
+
+/*	===============================
+	Footer
+	=============================== */
+
+.bk-footer {
+	background-color: @color-swatch3;
+	padding: 30px 0px;
+}
+
+.widget.profile {
+	margin: 0px auto;
+	display: table;
+	color:@font-swatch7-color;
+	width:inherit;
+}
+
+.widget.profile p, .widget.profile a {
+	color:@font-swatch7-color;
+}
+
+footer .widget.profile .bk-profile-socialicons span a {
+	background-color:@color-swatch3;
+}
+
+.footer-border {
+	text-align:center;
+}
+
+/*	===============================
+	Media queries
+	=============================== */
+
+@media only screen and (max-width: 580px) {
+	.responsivecolumns .columns-three-left, .columns-three-33-34-33 .columns-three-left,
+	.responsivecolumns .columns-three-middle, .columns-three-33-34-33 .columns-three-middle,
+	.responsivecolumns .columns-three-right, .columns-three-33-34-33 .columns-three-right {
+		width: 100%;
+	}
+	.wrapper {
+		width:90%;
+		padding:0 5%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.widget .extendednavigation ul li {
+		border:0;
+	}
+	.widget.extendednavigation {
+		width:100%;
+	}
+	.widget.extendednavigation .bk-overlay {
+		width: 100%!important;
+		left: inherit !important;
+	}
+	.widget .extendednavigation ul {
+		padding-top:0;
+	}
+	.widget .extendednavigation > ul > li > a, .widget .extendednavigation ul li.folder > .text {
+		padding:0 20px;
+	}
+	select {
+		width:100%;
+	}
+	.widget.responsiveslideshow .slideshow-widget .btn-play {
+		width: 12%;
+		left: 44%;
+	}
+	.wrapper {
+		width: 90%;
+		padding: 30px 5%;
+	}
+	.signupform fieldset input {
+		width: 100%;
+	}
+	.blog-post-feature-image-wrap {
+		margin-right: -12.7%;
+	}
+	.widget .extendednavigation a.pull {
+		width: 26px;
+		height: 20px;
+		top: -28px;
+	}
+
+}
+
+@media only screen and (max-width: 480px) {
+	.search-term {
+		display:block;
+	}
+	.blog-search-input {
+		width:60%;
+	}
+	.menu-subsection-header h2, .ecom-productlist-info h2 {
+		font-size: bkscale(@font-swatch2-font-size, 0.7);
+        line-height: bkscale(@font-swatch2-line-height, 0.7);
+	}
+	.widget.companyname a {
+		font-size: bkscale(@font-swatch2-font-size, 0.8);
+        line-height: bkscale(@font-swatch2-line-height, 0.8);
+	}
+	.widget.ecomcheckout table tr td .checkout-quantitybtn span {
+		width: 30px;
+	}
+	.widget.ecomcheckout table tr td .checkout-quantitybtn button {
+		width: 35px;
+		height: 35px;
+	}
+	.blog-post-item.has-image {
+		padding-bottom: 20px;
+	}
+	.blog-post-title {
+		padding-top: 20px;
+	}
+	.signupform fieldset input {
+		width: 68%;
+	}
+	.widget.responsiveslideshow .slideshow-widget .btn-play {
+		width: 20%;
+		left: 42%;
+	}
+	.wrapper {
+		width: 90%;
+		padding: 30px 5%;
+	}	
+	.signupform fieldset input {
+		width: 76%;
+	}
+	.widget.responsiveslideshow .slideshow-widget .btn-play {
+		width: 15%;
+		left: 0%;
+	}
+}
