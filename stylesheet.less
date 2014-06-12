@@ -32,6 +32,7 @@ body {
 
 .page-wrap {
 	background-color:@color-swatch1;
+	padding:40px 0px;
 }
 
 /*	===============================
@@ -122,10 +123,6 @@ header.bk-header, footer.bk-footer {
 	float:right;
 }
 
-.bk-section {
-	padding-top:40px;
-}
-
 /*	===============================
 	Extended Navigation
 	=============================== */
@@ -203,6 +200,10 @@ header.bk-header, footer.bk-footer {
    FEATURE = gallery widget
    =============================== */
 
+.widget.gallery ul {
+	margin-bottom:30px;
+}
+
 .widget.gallery ul li {
 	width: 25%;
 	padding-bottom:25%;
@@ -234,10 +235,17 @@ header.bk-header, footer.bk-footer {
 
 .blog-post-title {
 	padding-top:60px;
+	padding:0px 40px;
+}
+
+.blog-post-summary, .blog-post-more-link, time, .blog-post-content, .blog-post-category, .blog-post-tags {
+	padding:0px 40px;
 }
 
 .blog-post-item.has-image {
 	padding-bottom:60px;
+	background-color:darken(@color-swatch1,5%);
+	margin-bottom:30px;
 }
 
 .blog-search-input {
@@ -367,6 +375,10 @@ input,
 	padding: 7px 14px 11px;
 }
 
+.btn {
+	padding: 5px 14px 10px;
+}
+
 .widget.profile span, .widget.profile a, .widget.profile p {
 	font-family:@font-swatch6-font-family; 
 	font-weight: @font-swatch6-font-weight; 
@@ -419,10 +431,6 @@ textarea.message {
 
 .widget.profile .bk-profile-socialicons span a:hover {
 	background-color:@color-swatch7;
-}
-
-.contactform input, .contactform textarea {
-	width:40%;
 }
 
 .contactform label {
@@ -663,6 +671,10 @@ footer .widget.profile .bk-profile-socialicons span a {
 	float:right;
 }
 
+.bk-footer .contactform input, .bk-footer .contactform textarea {
+	width:50%;
+}
+
 /*	===============================
 	Media queries
 	=============================== */
@@ -676,6 +688,11 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.wrapper {
 		width:90%;
 		padding:0 5%;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.bk-footer .contactform input, .bk-footer .contactform textarea {
+		width:70%;
 	}
 }
 
@@ -715,8 +732,8 @@ footer .widget.profile .bk-profile-socialicons span a {
 		height: 20px;
 		top: -28px;
 	}
-	.contactform input, .contactform textarea {
-		width: 60%;
+	.bk-footer .contactform input, .bk-footer .contactform textarea {
+		width:70%;
 	}
 	.logo-container {
 		display: inline-block;
@@ -742,7 +759,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.widget .extendednavigation ul {
 		position:relative;
 		z-index:9999;
-		padding-top:30px;
 	}
 	.widget .extendednavigation a.pull:after {
 		content: '';
@@ -771,7 +787,25 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.widget .extendednavigation ul li a {
 		padding:0 20px;
 	}
-}
+	header.bk-header, footer.bk-footer {
+		padding: 20px 0px;
+	}
+	header.bk-header {
+		margin-bottom:20px;
+	}
+	.widgetheader .right {
+		margin: 0px auto;
+		display: table;
+		padding-bottom: 30px;
+		float:none;
+		padding-top:0;
+	}
+	.widgetheader .left {
+		margin: 0px auto;
+		display: table;
+		float:none;
+	}
+}	
 
 @media only screen and (max-width: 480px) {
 	.search-term {
@@ -826,5 +860,14 @@ footer .widget.profile .bk-profile-socialicons span a {
 		-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 		-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 		box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
+	}
+	.bk-footer .contactform input, .bk-footer .contactform textarea {
+		width:100%;
+	}
+	.blog-post-title {
+		padding:0px 20px;
+	}
+	.blog-post-summary, .blog-post-more-link, time, .blog-post-content, .blog-post-category, .blog-post-tags {
+		padding:0px 20px;
 	}
 }
