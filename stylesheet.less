@@ -124,6 +124,26 @@ header.bk-header, footer.bk-footer {
 }
 
 /*	===============================
+	FEATURE
+	=============================== */
+
+.widget.feature .feature-bgimg .content {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.widget.feature h2, .widget.feature h3 {
+	color:@font-swatch7-color;
+}
+
+.widget.feature h3 {
+	font-size:@font-swatch4-font-size;
+}
+
+.widget.feature .feature-bgimg .content button {
+	box-shadow: none;
+}
+
+/*	===============================
 	Extended Navigation
 	=============================== */
 
@@ -234,8 +254,7 @@ header.bk-header, footer.bk-footer {
 }
 
 .blog-post-title {
-	padding-top:60px;
-	padding:0px 40px;
+	padding:40px 40px 0px;
 }
 
 .blog-post-summary, .blog-post-more-link, time, .blog-post-content, .blog-post-category, .blog-post-tags {
@@ -243,7 +262,7 @@ header.bk-header, footer.bk-footer {
 }
 
 .blog-post-item.has-image {
-	padding-bottom:60px;
+	padding-bottom: 45px;
 	background-color:darken(@color-swatch1,5%);
 	margin-bottom:30px;
 }
@@ -440,6 +459,11 @@ textarea.message {
 	line-height:@font-swatch4-line-height; 
 	letter-spacing: @font-swatch4-letter-spacing; 
 	font-size: @font-swatch4-font-size;
+}
+
+.twitter ul li a {
+	font-size: 16px;
+	font-weight: 300;
 }
 
 /*	===============================
@@ -805,6 +829,11 @@ footer .widget.profile .bk-profile-socialicons span a {
 		display: table;
 		float:none;
 	}
+	.widget.companyname {
+		width: 100%;
+		margin-top: 5px;
+	}
+
 }	
 
 @media only screen and (max-width: 480px) {
