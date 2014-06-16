@@ -1,7 +1,7 @@
 {
-	"name":"Techdesk",
-	"thumbnail":"techdesk.png",
-	"screenshot":"techdesk.png",
+	"name":"ak-studio",
+	"thumbnail":"ak-studio.png",
+	"screenshot":"ak-studio.png",
 	"templateType":"blog",
         "pageTypes": [
         "home"
