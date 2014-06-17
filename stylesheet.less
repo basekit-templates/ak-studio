@@ -80,9 +80,6 @@ header.bk-header, footer.bk-footer {
 
 .widget.companyname {
 	margin-left: 5px;
-	@media @tablet {
-		margin-right: 35px;
-	}
 }
 
 .logo-container {
@@ -105,7 +102,7 @@ header.bk-header, footer.bk-footer {
 	margin-top:15px;
 }
 
-#textwidgetbox1 .bk-content-text {
+#textwidgetbox1 .bk-content-text p {
 	font-family:@font-swatch4-font-family; 
 	font-weight: @font-swatch4-font-weight; 
 	color:@font-swatch4-color; 
@@ -136,6 +133,10 @@ header.bk-header, footer.bk-footer {
 /*	===============================
 	FEATURE
 	=============================== */
+
+.widget.feature {
+	margin-bottom:20px;
+}
 
 .widget.feature .feature-bgimg .content {
 	background-color: rgba(0, 0, 0, 0.3);
@@ -291,6 +292,23 @@ header.bk-header, footer.bk-footer {
 	padding:20px 0px;
 }
 
+.blog-post-body {
+	padding:10px 40px 0px;
+}
+
+.blog-post-category {
+	padding-left:0;
+}
+
+.blog-post-item {
+	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
+	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
+	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
+	padding-bottom: 40px;
+	background-color:darken(@color-swatch1,5%);
+	margin-bottom: 40px;
+}
+
 /*	===============================
 	Menu
 	=============================== */
@@ -299,9 +317,6 @@ header.bk-header, footer.bk-footer {
 	padding:5px;
 	background-color:@color-swatch3;
 	color:@font-swatch7-color;
-	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
-	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 }
 
 .menu-item-promoted {
@@ -354,6 +369,10 @@ header.bk-header, footer.bk-footer {
         display: none;
         border: none;
     }
+}
+
+.menu-subsection-wrapper {
+	margin-top:20px;
 }
 
 /*	===============================
@@ -460,10 +479,12 @@ input,
 
 time {
 	font-size:1em;
+	padding:0;
 }
 
 .widget.responsiveslideshow .title, .widget.responsiveslideshow .description {
-	color:@font-swatch5-color;
+	color:@font-swatch7-color;
+	text-align:center;
 }
 
 textarea.message {
@@ -481,10 +502,11 @@ textarea.message {
 	line-height:@font-swatch4-line-height; 
 	letter-spacing: @font-swatch4-letter-spacing; 
 	font-size: @font-swatch4-font-size;
+	margin-top:5px;
 }
 
 .twitter ul li a {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
 }
 
@@ -624,6 +646,10 @@ select::-ms-expand {
 .widget.ecomcheckout {
 	width:80%;
 	margin:0 10%;
+}
+
+#productlist-search {
+	height:40px;
 }
 
 /* ===============================
@@ -888,7 +914,8 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 
 	.widget .extendednavigation ul li a:hover {
-		border-bottom: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 	.widget .extendednavigation ul li a {
 		padding:0 20px;
