@@ -123,7 +123,7 @@ header.bk-header, footer.bk-footer {
 .widgetheader {
 	background-color:@color-swatch3;
 	border-bottom:3px solid @color-swatch2;
-	padding:10px 0px 0px;
+	padding:10px 0px;
 }
 
 .widget.content .bk-content-text {
@@ -508,6 +508,11 @@ input,
 	line-height:@font-swatch6-line-height; 
 	letter-spacing: @font-swatch6-letter-spacing; 
 	font-size: @font-swatch6-font-size;
+	display: inline-block;
+}
+
+.bk-profile-address p {
+	padding-left:4px;
 }
 
 .widget.profile .bk-profile-socialicons {
@@ -727,6 +732,14 @@ select::-ms-expand {
 
 #productlist-search {
 	height:40px;
+	@media @mobile {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+.productlist-search button.btn {
+	padding: 5px 14px 11px;
 }
 
 /* ===============================
@@ -1119,5 +1132,8 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.widget.profile .bk-profile-socialicons span a {
 		width:22px;
 		height:22px;
+	}
+	.productlist-search label {
+		display:block;
 	}
 }
