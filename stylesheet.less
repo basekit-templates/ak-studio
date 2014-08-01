@@ -925,6 +925,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 @media only screen and (max-width: 768px) {
 	.widget .extendednavigation ul li {
 		border:0;
+		padding:0;
 	}
 	.widget.extendednavigation {
 		width:100%;
@@ -1008,7 +1009,13 @@ footer .widget.profile .bk-profile-socialicons span a {
 		padding-bottom: 0;
 	}
 	.widget .extendednavigation ul li a {
-		padding:0 20px;
+		padding: 10px 20px 0px;
+	}
+	.widget .extendednavigation ul li:hover ul li a:last-child {
+		padding-bottom:10px;
+	}
+	.widget .extendednavigation ul li.folder {
+		padding: 10px 0px 0px;
 	}
 	header.bk-header, footer.bk-footer {
 		padding: 20px 0px;
@@ -1065,6 +1072,9 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 	.left {
 		width:0;
+	}
+	.widget .extendednavigation ul li:hover ul {
+		margin:0;
 	}
 
 }	
