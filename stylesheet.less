@@ -125,13 +125,17 @@ header.bk-header, footer.bk-footer {
 	border-bottom:3px solid @color-swatch2;
 }
 
-.widgetheader .right {
-	padding-top:20px;
-	float:right;
-}
-
 .widget.content .bk-content-text {
 	overflow: inherit;
+}
+
+.left, .right  {
+	width:50%;
+}
+
+.right {
+	text-align:right;
+	float:right;
 }
 
 /*	===============================
@@ -231,17 +235,54 @@ header.bk-header, footer.bk-footer {
 	color:@font-swatch6-color;
 }
 
-/* ===============================
-   FEATURE = gallery widget
-   =============================== */
+// -----------------------------
+// Gallery
+// -----------------------------
 
-.widget.gallery ul {
-	margin-bottom:30px;
-}
-
-.widget.gallery ul li {
-	width: 25%;
-	padding-bottom:25%;
+.widget.gallery {
+    margin: 20px 0 20px -0.5%;
+    ul li {
+        @media @tablet {
+            width: 50%;
+            padding-bottom: 50%;
+        }
+        @media @mobile {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+        span.inner {
+            .title,
+            .description {
+                // Font
+                color: @color-swatch1;
+                font-family: @font-swatch4-font-family;
+                letter-spacing: @font-swatch4-letter-spacing;
+                text-align: left;
+            }
+            .title {
+                font-size: 19px;
+                font-weight: 600;
+                line-height: 26px;
+            }
+            .description {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    // Image Data
+    .image-data {
+        display: block;
+        opacity: 0;
+        background-color: @color-swatch3;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
 
 /*	===============================
@@ -406,7 +447,6 @@ header.bk-header, footer.bk-footer {
 	=============================== */
 
 input, 
-.widget.profile form fieldset input, 
 .signupform fieldset input, 
 .widget.contactform form fieldset textarea, 
 .widget.contactform form fieldset input  {
@@ -419,9 +459,13 @@ input,
     border-radius:0;
 }
 
+.widget.profile form fieldset input, .widget.profile form button {
+	border:0;
+	box-shadow:none;
+}
+
 .widget.ecomcheckout .checkout-order-button, 
 .contactform button.btn, 
-.widget.profile form button, 
 .signupform fieldset button, 
 .blog-search-submit-button, 
 .widget.button button, button.btn {
@@ -446,6 +490,10 @@ input,
 
 .widget.profile form button {
 	padding: 7px 14px 11px;
+	background-color:@color-swatch7;
+	&:hover {
+		background-color:lighten(@color-swatch7,10%);
+	}
 }
 
 .btn {
