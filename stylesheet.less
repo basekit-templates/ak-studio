@@ -123,6 +123,7 @@ header.bk-header, footer.bk-footer {
 .widgetheader {
 	background-color:@color-swatch3;
 	border-bottom:3px solid @color-swatch2;
+	padding:10px 0px 0px;
 }
 
 .widget.content .bk-content-text {
@@ -509,6 +510,18 @@ input,
 	font-size: @font-swatch6-font-size;
 }
 
+.widget.profile .bk-profile-socialicons {
+	margin:0;
+	a {
+		text-indent: 9999px;
+		overflow: hidden;
+	}
+}
+
+.widget.profile .bk-profile-socialicons span a:hover {
+	background-color:@color-swatch7;
+}
+
 .signupform fieldset button {
 	padding: 5px 14px 10px 14px;
 	margin: 5px 0px;
@@ -553,10 +566,6 @@ time {
 
 textarea.message {
 	height:200px;
-}
-
-.widget.profile .bk-profile-socialicons span a:hover {
-	background-color:@color-swatch7;
 }
 
 .contactform label {
