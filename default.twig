@@ -6,10 +6,10 @@
   <div class="widgetheader clearfix">
       <div class="headerwrapper">
           <div class="left">
-              {{widget('profile', 'headercolumn1socialicons', { 'profileType' : 'socialicons' })|raw}}
+              {{widget('profile', 'headercolumn2socialicons', { 'profileType' : 'socialicons' })|raw}}
           </div>
           <div class="right">
-              {{widget('profile', 'headercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+              {{widget('profile', 'headercolumn2profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
           </div>
       </div>
   </div>
@@ -17,7 +17,7 @@
 <header class="bk-header clearfix">
       <div class="headerwrapper">
         <div class="logo-container">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('logo', 'logo1', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
         <div class="textwidget">
