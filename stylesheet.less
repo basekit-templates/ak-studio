@@ -771,7 +771,7 @@ select::-ms-expand {
 .ecombasketsummary a, .ecombasket .ecombasket-pull p {
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
-  font-weight: @font-swatch7-font-weight;
+  font-weight: 700;
   &:hover {
     text-decoration: none;
   }
@@ -839,6 +839,9 @@ select::-ms-expand {
           background-color: darken(@color-swatch1,3%);
       padding: 5px 25px 6px;
       margin: -5px;
+            @media @mobile {
+        padding: 2px 11px 6px;
+      }
         }
         button {
             padding:8px 10px;
@@ -1213,6 +1216,10 @@ footer .widget.profile .bk-profile-socialicons span a {
 	.widget.ecomcheckout table tr td .checkout-quantitybtn button {
 		width: 40px;
 		height: 40px;
+	}
+	.widget.ecomcheckout {
+		width: 100%;
+		margin:0;
 	}
 }	
 
