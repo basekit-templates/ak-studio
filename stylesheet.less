@@ -69,10 +69,6 @@ header.bk-header, footer.bk-footer {
     padding:120px 0px;
 }
 
-.bk-pt-default header.bk-header {
-	padding: 40px 0px;
-}
-
 .widget {
 	&.logo, &.companyname {
 		display: inline-block;
@@ -80,6 +76,13 @@ header.bk-header, footer.bk-footer {
 	&.logo img {
 		vertical-align: bottom;
 	}
+}
+
+.widget {
+    &.logo, &.companyname {
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
 
 .widget.companyname {
@@ -463,6 +466,11 @@ input,
 .widget.profile form fieldset input, .widget.profile form button {
 	border:0;
 	box-shadow:none;
+}
+
+.widget.profile form {
+	margin:0;
+	margin-bottom:15px;
 }
 
 .widget.ecomcheckout .checkout-order-button, 
