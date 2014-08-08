@@ -85,6 +85,10 @@ header.bk-header, footer.bk-footer {
     }
 }
 
+.widget.logo img {
+	max-height:300px;
+}
+
 .widget.companyname {
 	margin-left: 5px;
 }
@@ -100,6 +104,14 @@ header.bk-header, footer.bk-footer {
 
 #textwidgetbox1 {
 	float:right;
+		display: -webkit-flexbox;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-flex-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
 }
 
 .textwidget {
@@ -519,6 +531,10 @@ input,
 	display: inline-block;
 }
 
+.widget.profile .twitter-content p {
+	display:block;
+}
+
 .bk-profile-address p {
 	padding-left:4px;
 }
@@ -612,6 +628,8 @@ textarea.message {
 
 .widget.twitter .twitter-content span.bk-full-name {
     line-height:60px;
+    font-weight: 700;
+	font-size: 16px;
 }
 
 /*	===============================
@@ -764,6 +782,10 @@ select::-ms-expand {
 
 .widget.ecomcheckout .delivery .delivery-title {
 	margin-top:30px;
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap img {
+	max-height:400px;
 }
 
 // Ecom Basket Summary
