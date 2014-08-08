@@ -837,17 +837,17 @@ select::-ms-expand {
         display: inline-block;
         span {
           background-color: darken(@color-swatch1,3%);
-      padding: 5px 25px 6px;
-      margin: -5px;
+      	  padding: 5px 25px 6px;
+      	  margin: -5px;
             @media @mobile {
-        padding: 2px 11px 6px;
+        	padding: 2px 11px 6px;
       }
         }
         button {
             padding:8px 10px;
-      border:0;
-      color:@color-swatch1;
-      background-color:@color-swatch3;
+      		border:0;
+      		color:@color-swatch1;
+      		background-color:@color-swatch3;
       &:hover {
         background-color:lighten(@color-swatch3,10%);
       }
@@ -1217,7 +1217,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 		width: 40px;
 		height: 40px;
 	}
-	.widget.ecomcheckout {
+	.widget.ecomcheckout, .widget.ecombasketsummary {
 		width: 100%;
 		margin:0;
 	}
@@ -1292,5 +1292,13 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 	.productlist-search label {
 		display:block;
+	}
+	.widget.ecomcheckout, .widget.ecombasketsummary {
+		width: 100%;
+		margin:0;
+	}
+	.headerwrapper {
+		width: 90%;
+		margin: 0 5%;
 	}
 }
