@@ -1160,8 +1160,11 @@ footer .widget.profile .bk-profile-socialicons span a {
 }
 
 .widgetfooter {
-	padding:50px 0px 40px;
+	padding: 4em 0;
 	background-color:@color-swatch3;
+	@media @mobile {
+		padding: 2em 0;
+	}
 }
 
 .widgetfooter .widget.companyname a {
@@ -1173,7 +1176,11 @@ footer .widget.profile .bk-profile-socialicons span a {
 }
 
 .widgetfooter .right {
-	float:right;
+	float: right;
+	@media @mobile {
+		margin-top: 20px;
+		text-align: center;
+	}
 }
 
 .bk-footer .contactform input, .bk-footer .contactform textarea {
@@ -1295,6 +1302,8 @@ footer .widget.profile .bk-profile-socialicons span a {
 		padding-bottom: 30px;
 		float:none;
 		padding-top:0;
+		width: 100%;
+		text-align: center;
 	}
 	.widgetheader .left {
 		margin: 0px auto;
