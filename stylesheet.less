@@ -790,29 +790,43 @@ select::-ms-expand {
 
 // Ecom Basket Summary
 
-.ecombasketsummary a, .ecombasket .ecombasket-pull p {
+.ecombasketsummary a {
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
   font-weight: @font-swatch7-font-weight;
+}
+
+.basket-summary-product-info a {
+  font-family: @font-swatch6-font-family;
+  font-size: @font-swatch6-font-size;
+  font-weight: @font-swatch6-font-weight;
+}
+
+.ecombasket .ecombasket-pull p {
+  font-family: @font-swatch7-font-family;
+  font-size: @font-swatch7-font-size;
   &:hover {
-    text-decoration: none;
+    background-color:@color-swatch3;
   }
 }
 
 .widget.ecombasketsummary {
 	width:90%;
 	margin: 0 5%;
+	padding-top:20px;
   table {
     border-spacing: 0;
     width: 100%;
     list-style: none;
     font-size: 18px;
     color: @color-swatch4;
-    padding:30px;
     margin: 20px 0 30px;
-    border: 1px solid darken(@color-swatch1,10%);
+    @media @tablet {
+      padding: 0px;
+    }
     @media @mobile {
       padding: 0px;
+      margin:0px 0px 30px 0px;
     }
     tr:first-child { 
     	    outline: 1px solid darken(@color-swatch1,10%);
@@ -831,6 +845,7 @@ select::-ms-expand {
             text-transform: uppercase;
             @media @mobile {
                 font-size: 12px;
+                display: none!important;
             }
       @media @mobile {
       	font-size: 12px;
@@ -859,6 +874,9 @@ select::-ms-expand {
             &:nth-child(2) {
                 padding: 20px;
                 vertical-align: top;
+                @media @mobile {
+                	padding:20px 0px;
+                }
             }
             &:nth-child(2) {
                 @media (max-width: 530px) {
@@ -900,7 +918,11 @@ select::-ms-expand {
 }
     .basket-summary-items {
       background: transparent;
-      @media @mobile {
+      @media @tablet {
+                img {
+            max-width:100px!important;
+        }
+              @media @mobile {
                 img {
             max-width:80px!important;
         }
@@ -909,6 +931,7 @@ select::-ms-expand {
           display: block;
         }
       }
+  }
       &:last-child {
         td {
           padding-bottom: 25px;
@@ -923,30 +946,45 @@ select::-ms-expand {
       .basket-summary-pricepu, .basket-summary-quantity, .basket-summary-amount {
         font-size: @font-swatch5-font-size;
         line-height: @font-swatch5-line-height;
+        label {
+        	display:block;
+        }
       }
       .basket-summary-pricepu {
         display: block;
       }
       .basket-summary-quantity, .basket-summary-quantitybtn {
         display: inline-block;
+        label {
+        	display:block;
+        }
         span {
-          background-color: darken(@color-swatch1,3%);
-      padding: 1px 25px 6px;
-      margin: -6px;
-            @media @mobile {
-        padding: 2px 10px 6px;
+        background-color: darken(@color-swatch1,3%);
+		padding: 5px 25px 6px;
+		margin: 0;
+		        @media @tablet {
+        	padding: 4px 10px 5px;
+        	margin: -3px;
+      }
+        @media @mobile {
+        	padding: 4px 10px 4px;
+        	margin: -3px;
       }
         }
         button {
             padding:8px 10px;
-      border:0;
-      color:@color-swatch1;
-      background-color:@color-swatch3;
-            @media @mobile {
-        padding:6px 6px;
-      }
+      		border:0;
+      		color:@color-swatch1;
+      		background-color:@color-swatch3;
+      		margin: 0;
+        @media @tablet {
+        	padding:7px 8px;
+      	}
+      	@media @mobile {
+        	padding:6px 9px;
+      	}
       &:hover {
-        background-color:lighten(@color-swatch3,10%);
+        background-color:@color-swatch7;
       }
         }
       }
@@ -962,6 +1000,7 @@ select::-ms-expand {
       margin-top: 25px;
       border:2px solid @color-swatch7;
       padding:20px;
+      font-weight:700;
     }
   }
 }
@@ -972,6 +1011,26 @@ select::-ms-expand {
   line-height: 45px;
   height: 45px;
   font-weight: @font-swatch7-font-weight;
+}
+
+.basket-summary-empty-cta.btn {
+	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
+	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
+	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
+	background-color:@color-swatch3;
+	text-decoration: none;
+	&:hover {
+		background-color:@color-swatch7;
+	}
+}
+
+.basket-summary-legal-links {
+    padding-top:10px;
+    list-style: none;
+    padding-left:0;
+    &:hover {
+        text-decoration:underline!important;
+    }
 }
 
 /* ===============================
