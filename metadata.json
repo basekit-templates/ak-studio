@@ -2,7 +2,7 @@
 	"name":"ak-studio",
 	"thumbnail":"ak-studio.png",
 	"screenshot":"ak-studio.png",
-	"templateType":"Standard Template",
+    "templateType":"standard",
         "pageTypes": [
         "home"
     ],
