@@ -460,11 +460,38 @@ header.bk-header, footer.bk-footer {
 	Bootstrap Modifications
 	=============================== */
 
+
+// Advanced Contact Form
+.advancedcontactform {
+    .label {
+        margin-bottom: 10px;
+    }
+    .input {
+        width: 100%;
+    }
+    .form-group {
+        margin-bottom: 10px;
+    }
+    select {
+        margin-top: 10px;
+        background-position-x: 99%;
+    }
+    .input--checkbox,
+    .input--radio {
+        box-shadow: none;
+    }
+    button {
+        margin-top: 10px;
+    }
+}
+
 input,
 .signupform fieldset input,
 .widget.contactform form fieldset textarea,
 .widget.contactform form fieldset input,
-.fonectacontactform textarea  {
+.fonectacontactform textarea,
+.advancedcontactform input,
+.advancedcontactform textarea  {
 	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 	box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
@@ -488,7 +515,8 @@ input,
 .contactform button.btn,
 .signupform fieldset button,
 .blog-search-submit-button,
-.widget.button button, button.btn {
+.widget.button button, button.btn,
+.advancedcontactform button {
 	background-color:@color-swatch3;
 	-webkit-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
 	-moz-box-shadow: 2px 2px 0px 1px rgba(218,218,218,1);
@@ -504,7 +532,8 @@ input,
 	background-color:@color-swatch3;
 }
 
-.widget.button button:hover, .blog-search-submit-button:hover, button.btn:hover {
+.widget.button button:hover, .blog-search-submit-button:hover, button.btn:hover,
+.advancedcontactform button:hover {
 	background-color:@color-swatch7!important;
 }
 
@@ -1170,6 +1199,23 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 }
 
+.bk-footer {
+    .contactform {
+        max-width: 60%;
+        margin: 0px auto;
+        @media @tablet {
+            max-width: 100%;
+        }
+    }
+    label {
+        margin-bottom: 10px;
+        display: block;
+    }
+    .form-group {
+        margin-top: 10px;
+    }
+}
+
 .widgetfooter .widget.companyname a {
 	color:@font-swatch7-color;
 }
@@ -1184,10 +1230,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 		margin-top: 20px;
 		text-align: center;
 	}
-}
-
-.bk-footer .contactform input, .bk-footer .contactform textarea {
-	width:50%;
 }
 
 /*	===============================
