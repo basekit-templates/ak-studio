@@ -1,5 +1,6 @@
 {
 	"name":"ak-studio",
+	"versionTenCompatible": 1,
 	"thumbnail":"ak-studio.png",
 	"screenshot":"ak-studio-screenshot.jpg",
     "templateType":"standard",
