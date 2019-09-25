@@ -1,0 +1,96 @@
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+// Stylseheet overrides
+// -----------------------------
+
+
+.mainzone.headerwrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.bk-pt-default .page-wrap {
+    padding: 0;
+}
+
+.bk-section .gallery {
+    margin-bottom: 0;
+}
+
+
+
+
+// Migration styles
+// -----------------------------
+
+
+// Replace with corresponding template values
+@container-width: 80%;
+@spacing__first--desktop: 20px;
+@spacing--other: 30px;
+
+
+// Applies spacing to widgets to mimic container width
+.empty-zone,
+#page-zones__main:empty,
+#page-zones__main > .widget:not(.row),
+.row:not(.widget):not(.row--width-no-padding) .row__container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: @container-width;
+  
+  @media @mobile {
+      max-width: 90%;
+  }
+}
+
+
+// Move spacing to first widget in the main zone (not sections)
+&.edit #page-zones__main-overlay + .widget:not(.row),
+#page-zones__main > .widget:not(.row):first-child {
+  padding-top: @spacing__first--desktop;
+}
+.bk-pt-default {
+    &.edit #page-zones__main-overlay + .widget:not(.row),
+    #page-zones__main > .widget:not(.row):first-child {
+        padding-top: 40px;
+    }
+}
+
+
+// Move spacing to last widget in the main zone (not sections)
+#page-zones__main > .widget:not(.row):last-child {
+  padding-bottom: @spacing__first--desktop;
+}
+.bk-pt-default #page-zones__main > .widget:not(.row):last-child {
+  padding-bottom: 40px;
+}
+
+
+// Add spacing to the top of a widget when it follows a section
+#page-zones__main > .row + .widget:not(.row) {
+  margin-top: @spacing--other;
+}
+
+
+// Remove spacing if widget follows a light section (change to dark if template has a dark BG)
+#page-zones__main > .row.style--light + .widget:not(.row) {
+  margin-top: 0;
+}
+
+
+// Adds spacing to the section when a widget is before it
+#page-zones__main > .widget:not(.row) + .row {
+  margin-top: @spacing--other;
+}
+
+
+} // End of #migrated-site
+
